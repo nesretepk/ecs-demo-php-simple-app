@@ -1,5 +1,8 @@
 FROM public.ecr.aws/lts/apache2:latest
 RUN  apt-get update \
+  && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common
+RUN  add-apt-repository ppa:ondrej/php
+RUN  apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install -y \
   	libapache2-mod-php8.2 \
     mysql-server \
@@ -10,12 +13,7 @@ RUN  apt-get update \
 		php8.2-common \
 		php8.2-curl \
 		php8.2-dev \
-		php8.2-enchant \
 		php8.2-fpm \
-		php8.2-gd \
-		php8.2-gmp \
-		php8.2-imap \
-		php8.2-interbase \
 		php8.2-intl \
 		php8.2-json \
 		php8.2-ldap \
@@ -24,7 +22,6 @@ RUN  apt-get update \
 		php8.2-mysql \
 		php8.2-odbc \
 		php8.2-opcache \
-		php8.2-pgsql \
 		php8.2-phpdbg \
 		php8.2-pspell \
 		php8.2-readline \
