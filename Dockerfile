@@ -1,4 +1,3 @@
-FROM public.ecr.aws/lts/ubuntu:latest
-
+FROM public.ecr.aws/nginx/nginx:mainline
 EXPOSE 80
-COPY src/* /var/www/html/
+COPY src/index.html /usr/share/nginx/html
