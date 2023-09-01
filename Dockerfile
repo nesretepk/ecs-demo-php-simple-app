@@ -1,4 +1,4 @@
-FROM public.ecr.aws/ubuntu/ubuntu:latest
+FROM public.ecr.aws/ubuntu/ubuntu:22.04_stable
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 # install required packages
