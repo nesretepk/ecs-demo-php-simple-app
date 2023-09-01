@@ -1,6 +1,4 @@
 FROM public.ecr.aws/ubuntu/ubuntu:latest
-
-FROM ubuntu:latest
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 # install required packages
