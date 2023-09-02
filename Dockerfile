@@ -1,4 +1,5 @@
-FROM aws/codebuild/standard:5.0
+#FROM public.ecr.aws/docker/library/httpd:latest
+FROM public.ecr.aws/nginx/nginx:mainline
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 # install required packages
