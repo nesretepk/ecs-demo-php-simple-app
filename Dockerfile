@@ -36,4 +36,3 @@ RUN chmod +x /etc/service/my_apache/run
 RUN mkdir -p /var/www/html/exams/
 COPY . /var/www/html/exams/
 CMD [ "/boot" ]
-
