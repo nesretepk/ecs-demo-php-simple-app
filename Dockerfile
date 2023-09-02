@@ -1,4 +1,4 @@
-FROM public.ecr.aws/ubuntu/ubuntu:22.04_stable
+FROM aws/codebuild/standard:5.0
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 # install required packages
