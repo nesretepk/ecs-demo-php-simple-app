@@ -1,5 +1,6 @@
 #FROM public.ecr.aws/docker/library/httpd:latest
-FROM public.ecr.aws/nginx/nginx:mainline
+#FROM public.ecr.aws/nginx/nginx:mainline
+FROM public.ecr.aws/ubuntu/ubuntu:edge
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 # install required packages
