@@ -27,12 +27,12 @@ RUN ln -s /etc/runit/runsvdir/default/my_apache /etc/service/my_apache
 RUN echo "#!/bin/bash\necho "start apache"\n/etc/init.d/apache2 start" > /etc/service/my_apache/run
 
 # ports and entrypoint configuration
-EXPOSE 3306 80
+EXPOSE 3306 80 8080
 RUN rm -rf /boot
 COPY boot /
 RUN chmod +x /boot
 RUN chmod +x /etc/service/my_sql/run
 RUN chmod +x /etc/service/my_apache/run
 RUN mkdir -p /var/www/html/exams/
-COPY . /var/www/html/exams/
+COPY ./src/* /var/www/html/exams/
 CMD [ "/boot" ]
