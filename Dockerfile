@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM public.ecr.aws/docker/library/ubuntu:rolling
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 # install required packages
