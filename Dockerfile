@@ -7,4 +7,4 @@ EXPOSE 80
 #COPY src/index.html /usr/share/nginx/html
 
 RUN mkdir -p /var/www/html/exams/
-COPY ./src/* /var/www/html/exams/
+COPY ./src/* /var/www/html/
