@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # install required packages
 ADD ./setup.sh /setup.sh
 RUN chmod +x /setup.sh
-RUN /setup.sh
+# RUN /setup.sh
 # Install docker
 # RUN apt-get update &&  apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # install runit (init scheme)
