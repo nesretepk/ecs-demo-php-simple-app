@@ -8,10 +8,10 @@ RUN chmod +x /setup.sh
 # Install docker
 # RUN apt-get update &&  apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # install runit (init scheme)
-RUN apt-get install -y runit
-RUN apt-get install -y byobu
-RUN apt-get install -y nano
-RUN apt-get install -y htop
+#RUN apt-get update && apt-get install -y runit
+#RUN apt-get update && apt-get install -y byobu
+#RUN apt-get update && apt-get install -y nano
+#RUN apt-get update && apt-get install -y htop
 
 RUN rm -rf /etc/service
 RUN mkdir -p /etc/service
