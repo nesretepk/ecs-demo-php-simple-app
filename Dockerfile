@@ -8,23 +8,23 @@ RUN chmod +x /setup.sh
 # Install docker
 # RUN apt-get update &&  apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # install runit (init scheme)
-RUN apt-get update && apt-get install -y runit
+#RUN apt-get update && apt-get install -y runit
 #RUN apt-get update && apt-get install -y byobu
 #RUN apt-get update && apt-get install -y nano
 #RUN apt-get update && apt-get install -y htop
 
-RUN rm -rf /etc/service
-RUN mkdir -p /etc/service
+#RUN rm -rf /etc/service
+#RUN mkdir -p /etc/service
 
 RUN mkdir -p /etc/service/my_sql
 # configure mysql service by using runit directive
-RUN ln -s /etc/runit/runsvdir/default/my_sql /etc/service/my_sql
-RUN echo "#!/bin/sh\n/etc/init.d/mysql start" > /etc/service/my_sql/run
+#RUN ln -s /etc/runit/runsvdir/default/my_sql /etc/service/my_sql
+#RUN echo "#!/bin/sh\n/etc/init.d/mysql start" > /etc/service/my_sql/run
 
 RUN mkdir -p /etc/service/my_apache
 # configure apache service by using runit directive
-RUN ln -s /etc/runit/runsvdir/default/my_apache /etc/service/my_apache
-RUN echo "#!/bin/bash\necho "start apache"\n/etc/init.d/apache2 start" > /etc/service/my_apache/run
+#RUN ln -s /etc/runit/runsvdir/default/my_apache /etc/service/my_apache
+#RUN echo "#!/bin/bash\necho "start apache"\n/etc/init.d/apache2 start" > /etc/service/my_apache/run
 
 # ports and entrypoint configuration
 EXPOSE 3306 80 443
