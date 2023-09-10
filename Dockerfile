@@ -1,4 +1,4 @@
-FROM public.ecr.aws/docker/library/php:8.1.23-apache
+FROM public.ecr.aws/docker/library/ubuntu:rolling
 # disable package prompt interaction
 ENV DEBIAN_FRONTEND noninteractive
 # install required packages
