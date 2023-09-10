@@ -35,4 +35,4 @@ EXPOSE 3306 80 443
 #RUN chmod +x /etc/service/my_apache/run
 #RUN mkdir -p /var/www/html/exams/
 COPY awshc/* /var/www/html/
-CMD [ "/boot" ] 
+#CMD [ "/boot" ] 
