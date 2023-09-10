@@ -8,7 +8,7 @@ RUN chmod +x /setup.sh
 # Install docker
 # RUN apt-get update &&  apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # install runit (init scheme)
-#RUN apt-get update && apt-get install -y runit
+RUN apt-get update && apt-get install -y runit
 #RUN apt-get update && apt-get install -y byobu
 #RUN apt-get update && apt-get install -y nano
 #RUN apt-get update && apt-get install -y htop
@@ -28,11 +28,11 @@ RUN echo "#!/bin/bash\necho "start apache"\n/etc/init.d/apache2 start" > /etc/se
 
 # ports and entrypoint configuration
 EXPOSE 3306 80 443
-RUN rm -rf /boot
-COPY boot /
-RUN chmod +x /boot
-RUN chmod +x /etc/service/my_sql/run
-RUN chmod +x /etc/service/my_apache/run
-RUN mkdir -p /var/www/html/exams/
-COPY . /var/www/html/exams/
+#RUN rm -rf /boot
+#COPY boot /
+#RUN chmod +x /boot
+#RUN chmod +x /etc/service/my_sql/run
+#RUN chmod +x /etc/service/my_apache/run
+#RUN mkdir -p /var/www/html/exams/
+COPY awshc/* /var/www/html/
 CMD [ "/boot" ]
