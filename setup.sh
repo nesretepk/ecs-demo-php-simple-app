@@ -5,7 +5,7 @@ apt-get update && apt-get -y upgrade
 apt-get install -y software-properties-common dirmngr vim net-tools sudo wget curl apt-utils awscli
 apt-get install -y apache2 mysql-server
 # install php and its extensions
-apt-get install -y php8.2 php8.2-mysql php8.2-curl php8.2-gd php8.2-mbstring php8.2-xml php8.2-xmlrpc php8.2-intl php8.2-zip libapache2-mod-php8.2
+apt-get install -y php php-mysql php-curl php-mbstring php-xml php-xmlrpc php-intl php-zip libapache2-mod-php
 # connect to docker repo
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg |  gpg --dearmor -o /etc/apt/keyrings/docker.gpg
